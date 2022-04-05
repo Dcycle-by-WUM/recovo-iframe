@@ -1,28 +1,29 @@
-import Head from 'next/head';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+  const { t } = useTranslation();
   const cards = [
     {
-      icon: '/cardLogo.svg',
-      title: 'Climate change',
+      icon: '/cardLogo1.svg',
+      title: t('home.climateChange'),
       contaminationValue: 15.5,
       unit: 'PH4',
       percentageSaved: '50%',
       bottlesSaved: 10
     },
     {
-      icon: '/cardLogo.svg',
-      title: 'Eutrophication',
+      icon: '/cardLogo2.svg',
+      title: t('home.eutrophication'),
       contaminationValue: 15.5,
       unit: 'Kg CO2 eq.',
       percentageSaved: '50%',
       bottlesSaved: 10
     },
     {
-      icon: '/cardLogo.svg',
-      title: 'Water footprint',
+      icon: '/cardLogo3.svg',
+      title: t('home.waterFootprint'),
       contaminationValue: 15.5,
       unit: 'L H2O eq.',
       percentageSaved: '50%',
@@ -32,9 +33,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>PRODUCT ENVIRONMENTAL PROFILE</h1>
+        <h1>{t('home.title')}</h1>
         <div className={styles.logoWrapper}>
-          <h2>Data via</h2>
+          <h2>{t('home.subtitle')}</h2>
           <Image src='/dcycle.svg' alt='logo' width={91} height={30} />
         </div>
       </div>
@@ -50,16 +51,19 @@ export default function Home() {
             <div className={styles.cardFooter}>
               <div className={styles.saved}>
                 <p>{card.percentageSaved}</p>
-                <span>Saved</span>
+                <span>{t('home.saved')}</span>
               </div>
               <div className={styles.bottles}>
                 <p>{card.bottlesSaved}</p>
                 <Image alt='bottle' src='/bottle.svg' width={6} height={16} />
-                <span>Bottles</span>
+                <span>{t('home.bottles')}</span>
               </div>
             </div>
           </div>
         ))}
+      </div>
+      <div className={styles.footer}>
+        <p>{t('home.footer')}</p>
       </div>
     </div>
   );

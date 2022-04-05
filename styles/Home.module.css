@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 .container {
-  max-width: 1168px;
+  max-width: 1235px;
   padding: 37px 193px;
+}
+.container * {
+  font-family: 'Poppins', sans-serif;
 }
 .header {
   margin-bottom: 52px;
@@ -123,4 +128,15 @@
   line-height: 100%;
   color: rgba(0, 0, 0, 0.4);
   margin-left: 8px;
+}
+
+.footer {
+  margin-top: 52px;
+}
+.footer p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
 }
