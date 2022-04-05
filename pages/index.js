@@ -14,17 +14,17 @@ export default function Home() {
     },
     {
       icon: '/cardLogo.svg',
-      title: 'Climate change',
+      title: 'Eutrophication',
       contaminationValue: 15.5,
-      unit: 'PH4',
+      unit: 'Kg CO2 eq.',
       percentageSaved: '50%',
       bottlesSaved: 10
     },
     {
       icon: '/cardLogo.svg',
-      title: 'Climate change',
+      title: 'Water footprint',
       contaminationValue: 15.5,
-      unit: 'PH4',
+      unit: 'L H2O eq.',
       percentageSaved: '50%',
       bottlesSaved: 10
     }
@@ -41,7 +41,7 @@ export default function Home() {
       <div className={styles.content}>
         {cards.map((card, index) => (
           <div className={styles.card} key={`${card.title}-${index}`}>
-            <Image src={card.icon} width={45} height={45} alt='card-icon' />
+            <Image src={card.icon} width={58} height={58} alt='card-icon' />
             <h1>{card.title}</h1>
             <div className={styles.contamination}>
               <p>{card.contaminationValue}</p>
@@ -54,7 +54,7 @@ export default function Home() {
               </div>
               <div className={styles.bottles}>
                 <p>{card.bottlesSaved}</p>
-                <Image alt='bottle' src='/bottle.svg' width={7} height={9} />
+                <Image alt='bottle' src='/bottle.svg' width={6} height={16} />
                 <span>Bottles</span>
               </div>
             </div>
