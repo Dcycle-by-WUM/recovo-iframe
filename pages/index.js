@@ -9,14 +9,6 @@ export default function Home() {
       icon: '/cardLogo1.svg',
       title: t('home.climateChange'),
       contaminationValue: 15.5,
-      unit: 'PH4',
-      percentageSaved: '50%',
-      bottlesSaved: 10
-    },
-    {
-      icon: '/cardLogo2.svg',
-      title: t('home.eutrophication'),
-      contaminationValue: 15.5,
       unit: 'Kg CO2 eq.',
       percentageSaved: '50%',
       bottlesSaved: 10
@@ -26,6 +18,14 @@ export default function Home() {
       title: t('home.waterFootprint'),
       contaminationValue: 15.5,
       unit: 'L H2O eq.',
+      percentageSaved: '50%',
+      bottlesSaved: 10
+    },
+    {
+      icon: '/cardLogo2.svg',
+      title: t('home.eutrophication'),
+      contaminationValue: 15.5,
+      unit: 'PH4',
       percentageSaved: '50%',
       bottlesSaved: 10
     }
@@ -49,10 +49,10 @@ export default function Home() {
               <span>{card.unit}</span>
             </div>
             <div className={styles.cardFooter}>
-              <div className={styles.saved}>
+              {/* <div className={styles.saved}>
                 <p>{card.percentageSaved}</p>
                 <span>{t('home.saved')}</span>
-              </div>
+              </div> */}
               <div className={styles.bottles}>
                 <p>{card.bottlesSaved}</p>
                 <Image alt='bottle' src='/bottle.svg' width={6} height={16} />

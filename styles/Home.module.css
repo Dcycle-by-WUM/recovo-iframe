@@ -47,6 +47,7 @@
   background: rgba(234, 234, 234, 0.21);
   border-radius: 8px;
   margin-right: 32px;
+  width: 33%;
 }
 .card:last-child {
   margin-right: 0;

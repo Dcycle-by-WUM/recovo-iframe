@@ -13,6 +13,7 @@ i18next.use(LanguageDetector).init({
     escapeValue: false
   },
   fallbackLng: 'en',
+  // lng: 'en',
   debug: true,
   // Using simple hardcoded resources for simple example
   resources: {
