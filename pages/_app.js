@@ -14,7 +14,7 @@ i18next.use(LanguageDetector).init({
   },
   fallbackLng: 'en',
   // lng: 'en',
-  debug: true,
+  // debug: true,
   // Using simple hardcoded resources for simple example
   resources: {
     es: {
